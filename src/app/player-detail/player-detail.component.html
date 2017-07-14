@@ -1,0 +1,13 @@
+
+<div *ngIf="showProperties">
+  <div class="imageWrapper">
+    <img src="{{playerToDisplay.image}}" alt="">
+  </div>
+  <h3>{{(playerToDisplay).name}}</h3>
+  <h3>{{(playerToDisplay).position}}</h3>
+  <button (click)="editPlayer()" class="btn">Edit</button>
+</div>
+<div *ngIf="edit">
+  <edit-player [selectedPlayer]="playerToDisplay"></edit-player>
+</div>
+<button (click)="beginDeletingPlayer(playerToDisplay)" class="btn">Delete</button>

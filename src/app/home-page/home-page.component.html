@@ -1,10 +1,1 @@
 <div class="head"></div>
-<div class="wrapper">
-  <div class="playerItems" *ngFor="let player of players | async" (click)="goToPlayerDetailPage(player)">
-    <div class="thumbnailWrapper">
-      <img src="{{player.image}}" alt="">
-    </div>
-    <h3 >{{player.name}}</h3>
-    <h3>{{player.author}}</h3>
-  </div>
-</div>

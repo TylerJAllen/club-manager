@@ -1,13 +1,20 @@
 <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-      <h1><a class="navbar-brand" routerLink="">Players</a></h1>
+      <h1><a class="navbar-brand" routerLink="">Roster Tracker</a></h1>
     </div>
     <div class="nav navbar-nav navbar-right">
-      <h2><a routerLink="add-player">Add a player</a></h2>
+      <h2><a routerLink="about-page">About</a></h2>
+      <h2><a routerLink="roster-page">Roster</a></h2>
     </div>
   </div>
 </nav>
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+
+<footer class="footer">
+  <div class="container">
+    <a class="text-muted" routerLink="admin">Admin</a>
+  </div>
+</footer>

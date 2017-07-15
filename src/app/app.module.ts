@@ -9,10 +9,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
-import { AddPlayerComponent } from './add-player/add-player.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import { AdminComponent } from './admin/admin.component';
+import { RosterPageComponent } from './roster-page/roster-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,10 +26,12 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    AddPlayerComponent,
     EditPlayerComponent,
     HomePageComponent,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    AdminComponent,
+    RosterPageComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

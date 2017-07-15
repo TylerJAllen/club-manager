@@ -1,44 +1,52 @@
 <div class="panel">
   <div class="panel-heading">
-    <h3 class="panel-title">Edit Player</h3>
+    <h3 class="panel-title">Add New Player</h3>
   </div>
   <div class="panel-body">
     <div>
       <div class="form-group">
         <label>Player Name:</label>
         <br>
-        <input [(ngModel)]="selectedPlayer.name" class="form-control">
+        <input #newName class="form-control">
       </div>
 
       <div class="form-group">
         <label>Player Position:</label>
         <br>
-        <input [(ngModel)]="selectedPlayer.position" class="form-control">
+        <input #newPosition class="form-control">
       </div>
+
       <div class="form-group">
         <label>Player Jersey:</label>
         <br>
-        <input [(ngModel)]="selectedPlayer.jersey" class="form-control">
+        <input #newJersey class="form-control">
       </div>
+
       <div class="form-group">
         <label>Player Experience:</label>
         <br>
-        <input [(ngModel)]="selectedPlayer.experience" class="form-control">
+        <input #newExperience class="form-control">
       </div>
 
       <div class="form-group">
         <label>Player Image:</label>
         <br>
-        <input [(ngModel)]="selectedPlayer.image" type="url" class="form-control">
+        <input #newImage class="form-control">
       </div>
+
       <div class="form-group">
         <label>Player Description:</label>
         <br>
-        <textarea [(ngModel)]="selectedPlayer.description" class="form-control"></textarea>
+        <textarea #newDescription class="form-control"></textarea>
       </div>
-      <button (click)="beginUpdatingPlayer(selectedPlayer)" class="btn">Update</button>
+
+      <button (click)="submitForm(newName.value, newPosition.value, newJersey.value, newExperience.value, newImage.value, newDescription.value); newName.value=''; newPosition.value=''; newJersey.value=''; newExperience.value=''; newImage.value=''; newDescription.value=''" class="btn">Add</button>
+
     </div>
   </div>
+</div>
+<div>
+  <roster-page></roster-page>
 </div>
 
 <footer class="footer"></footer>

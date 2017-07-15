@@ -27,9 +27,11 @@ export class PlayerService {
    updatePlayer(playerToUpdate){
      var playerEntryInDB = this.findPlayerDetail(playerToUpdate.$key);
      playerEntryInDB.update({name: playerToUpdate.name,
-                            author: playerToUpdate.author,
-                            description: playerToUpdate.description,
-                            image: playerToUpdate.image});
+                            position: playerToUpdate.position,
+                            jersey: playerToUpdate.jersey,
+                            experience: playerToUpdate.experience,
+                            image: playerToUpdate.image,
+                            description: playerToUpdate.description});
    }
 
    deletePlayer(playerToDelete){

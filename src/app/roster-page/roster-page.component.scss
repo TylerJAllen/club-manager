@@ -1,0 +1,24 @@
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.playerItems {
+  flex-basis: 24%;
+  margin: 5% 0;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.thumbnailWrapper {
+  width: 100%;
+  & img {
+    height: inherit;
+    width: inherit;
+  }
+}

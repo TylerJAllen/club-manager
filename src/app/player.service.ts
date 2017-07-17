@@ -9,7 +9,6 @@ export class PlayerService {
 
   constructor(private database: AngularFireDatabase) {
     this.players = database.list('players');
-    console.log(this.players);
    }
 
    getPlayers(){
@@ -36,7 +35,6 @@ export class PlayerService {
 
    deletePlayer(playerToDelete){
      var playerEntryInDB = this.findPlayerDetail(playerToDelete.$key);
-     console.log(playerEntryInDB);
      playerEntryInDB.remove();
    }
 }

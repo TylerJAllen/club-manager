@@ -1,16 +1,26 @@
-<div class="wrapper">
+
+<div *ngIf="currentRoute === '/roster-page'" class="wrapper">
   <div class="playerItems" *ngFor="let player of players | async" (click)="goToPlayerDetailPage(player)">
     <div class="thumbnailWrapper">
       <img src="{{player.image}}" alt="">
     </div>
-    <h3 >{{player.name}}</h3>
+    <h3>{{player.name}}</h3>
     <h3>{{player.position}}</h3>
-    <div *ngIf="currentRoute === '/admin'">
-      <h3>{{player.jersey}}</h3>
-      <h3>{{player.experience}}</h3>
-      <h3>{{player.description}}</h3>
-      <hr>
-      <edit-player [selectedPlayer]="player"></edit-player>
+  </div>
+</div>
+
+
+<div *ngIf="currentRoute === '/admin'" class="wrapper">
+  <div class="playerItems playerItemsAdmin" *ngFor="let player of players | async">
+    <div class="thumbnailWrapper">
+      <img src="{{player.image}}" alt="">
     </div>
+    <h3 (click)="goToPlayerDetailPage(player)">{{player.name}}</h3>
+    <h3>{{player.position}}</h3>
+    <h3>{{player.jersey}}</h3>
+    <h3>{{player.experience}}</h3>
+    <h3>{{player.description}}</h3>
+    <hr>
+    <edit-player [selectedPlayer]="player"></edit-player>
   </div>
 </div>

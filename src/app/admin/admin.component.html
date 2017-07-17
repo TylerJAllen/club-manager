@@ -4,40 +4,40 @@
   </div>
   <div class="panel-body">
     <div>
-      <div class="form-group">
+      <div>
         <label>Player Name:</label>
         <br>
-        <input #newName class="form-control">
+        <input #newName>
       </div>
 
-      <div class="form-group">
+      <div>
         <label>Player Position:</label>
         <br>
-        <input #newPosition class="form-control">
+        <input #newPosition>
       </div>
 
-      <div class="form-group">
+      <div>
         <label>Player Jersey:</label>
         <br>
-        <input #newJersey class="form-control">
+        <input #newJersey>
       </div>
 
-      <div class="form-group">
+      <div>
         <label>Player Experience:</label>
         <br>
-        <input #newExperience class="form-control">
+        <input #newExperience>
       </div>
 
-      <div class="form-group">
+      <div>
         <label>Player Image:</label>
         <br>
-        <input #newImage class="form-control">
+        <input #newImage>
       </div>
 
-      <div class="form-group">
+      <div>
         <label>Player Description:</label>
         <br>
-        <textarea #newDescription class="form-control"></textarea>
+        <textarea #newDescription></textarea>
       </div>
 
       <button (click)="submitForm(newName.value, newPosition.value, newJersey.value, newExperience.value, newImage.value, newDescription.value); newName.value=''; newPosition.value=''; newJersey.value=''; newExperience.value=''; newImage.value=''; newDescription.value=''" class="btn">Add</button>

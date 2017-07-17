@@ -4,6 +4,7 @@ import { Player } from '../player.model';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'roster-page',
   templateUrl: './roster-page.component.html',
@@ -11,11 +12,9 @@ import { Router } from '@angular/router';
   providers: [PlayerService]
 })
 export class RosterPageComponent implements OnInit {
-
   adding: boolean = false;
   players: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  
   constructor(private router: Router, private playerService: PlayerService) { }
 
   ngOnInit() {

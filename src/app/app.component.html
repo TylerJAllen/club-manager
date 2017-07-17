@@ -1,20 +1,18 @@
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <h1><a class="navbar-brand" routerLink="">Roster Tracker</a></h1>
-    </div>
-    <div class="nav navbar-nav navbar-right">
-      <h2><a routerLink="about-page">About</a></h2>
-      <h2><a routerLink="roster-page">Roster</a></h2>
-    </div>
+<div class="navbar">
+  <div class="nav-left">
+    <h1><a class="" routerLink="">NY JETS</a></h1>
   </div>
-</nav>
+  <div class="nav-right">
+    <h2><a routerLink="about-page">About</a></h2>
+    <h2><a routerLink="roster-page">Roster</a></h2>
+  </div>
+</div>
+
 <div class="container">
   <router-outlet></router-outlet>
 </div>
 
-<footer class="footer">
-  <div class="container">
-    <a class="text-muted" routerLink="admin">Admin</a>
-  </div>
-</footer>
+
+<div class="footer">
+  <a class="text-muted" routerLink="admin">Admin</a>
+</div>

@@ -30,7 +30,6 @@ export class PlayerDetailComponent implements OnInit {
 
     this.playerService.findPlayerDetail(this.playerId).subscribe(dataLastEmittedFromObserver => {
       this.playerToDisplay = dataLastEmittedFromObserver;
-      console.log(this.playerToDisplay);
     })
 
   }
@@ -38,11 +37,11 @@ export class PlayerDetailComponent implements OnInit {
     this.edit = true;
     this.showProperties = false;
   }
-  beginDeletingPlayer(selectedPlayer) {
-    this.playerService.findPlayerDetail(this.playerId).subscribe(dataLastEmittedFromObserver => {
-      this.playerToDisplay = dataLastEmittedFromObserver;
-      this.playerService.deletePlayer(this.playerToDisplay);
-    });
-    this.router.navigate(['']);
-  }
+  // beginDeletingPlayer(selectedPlayer) {
+  //   this.playerService.findPlayerDetail(this.playerId).subscribe(dataLastEmittedFromObserver => {
+  //     this.playerToDisplay = dataLastEmittedFromObserver;
+  //     this.playerService.deletePlayer(this.playerToDisplay);
+  //   });
+  //   this.router.navigate(['']);
+  // }
 }

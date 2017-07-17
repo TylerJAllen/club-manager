@@ -1,3 +1,19 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  
+  position: relative;
+  min-height: 100vh;
+  background-image: url("http://www.infinitescale.com/static/media/uploads/work_items/jets/jets-22.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
